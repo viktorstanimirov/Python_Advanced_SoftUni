@@ -7,6 +7,7 @@ fuel_needed = list((int(x) for x in input().split()))
 reached_points = 0
 result = []
 is_finished = False
+is_out_of_fuel = False
 while initial_fuel:
 
     fuel = initial_fuel.pop()
@@ -23,6 +24,7 @@ while initial_fuel:
         if reached_points == 0:
             print("John failed to reach the top.")
             print("John didn't reach any altitude.")
+            break
 
         reached_points += 1
         print(f"John did not reach: Altitude {reached_points}")
